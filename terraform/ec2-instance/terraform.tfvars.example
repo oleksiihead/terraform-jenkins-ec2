@@ -1,0 +1,12 @@
+proj_name          = "Put project name here"
+cred_file          = "Put path to aws credentials here"
+region             = "Put region here"
+sec_group_name     = "Put security group's name here"
+default_cidr_block = "0.0.0.0/0"
+# /32 means only my ip get access
+my_ip               = "Your IP for SSH access to instance"
+ssh_public_key_name = "Put SSH public ken name here"
+public_key          = "Path to public key"
+ec2_instance_type   = "AWS instance type"
+private_key         = "Path to private key"
+instance_user       = "AWS instance user"
