@@ -8,6 +8,31 @@ variable "region" {
   description = "Default region"
 }
 
+variable "vpc_cidr_block" {
+  type        = string
+  description = "VPC cidr block"
+}
+
+variable "subnet_count" {
+  type        = number
+  description = "Desired number of subnets"
+}
+
+variable "subnet_cidr_blocks" {
+  type        = list(string)
+  description = "Subnet cidr block"
+}
+
+variable "available_zone" {
+  type        = string
+  description = "Availability zone"
+}
+
+variable "route_table_cidr_block" {
+  type        = string
+  description = "Route table cidr block"
+}
+
 variable "sec_group_name" {
   type        = string
   description = "Name of security group"

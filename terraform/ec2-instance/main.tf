@@ -86,7 +86,7 @@ data "aws_ami" "aws_linux_image" {
 
 resource "aws_security_group" "sec_group" {
   name   = var.sec_group_name
-  vpc_id = data.aws_vpc.current_vpc.id
+  vpc_id = aws_vpc.vpc.id
 
   dynamic "ingress" {
     for_each = local.ingress_rules
@@ -131,7 +131,7 @@ resource "aws_instance" "ec2_vm" {
   instance_type               = var.ec2_instance_type
   key_name                    = aws_key_pair.deploy_ssh_key.key_name
   associate_public_ip_address = true
-  subnet_id                   = data.aws_subnet.data_subnet.id
+  subnet_id                   = aws_subnet.subnet[count.index].id
   vpc_security_group_ids      = [aws_security_group.sec_group.id]
   availability_zone           = data.aws_availability_zones.data_zone.names[0]
 

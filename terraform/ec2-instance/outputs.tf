@@ -1,10 +1,6 @@
-#output "all-vpcs-ids" {
-#  value = data.aws_vpcs.all-vpcs.ids
-#}
-
 output "vpc_id" {
   description = ""
-  value       = data.aws_vpc.current_vpc.id
+  value       = aws_vpc.vpc.id
 }
 
 output "instance_public_ip" {
