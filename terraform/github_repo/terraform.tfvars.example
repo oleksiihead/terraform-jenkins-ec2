@@ -1,0 +1,6 @@
+github_token           = "GitHub token for terraform"
+repo_name              = "Repository name"
+repo_visibility        = "public or private"
+webhook_url            = "Webhook URL for Jenkins"
+content_type           = "json or form"
+webhook_events         = ["List of GitHub events"]
