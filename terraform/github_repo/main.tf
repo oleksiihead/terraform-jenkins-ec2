@@ -12,4 +12,3 @@ resource "github_repository_webhook" "gh_webhook" {
     content_type = var.content_type
   }
 }
-
